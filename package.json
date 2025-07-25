@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-google-maps/api": "^2.20.7",
+    "@vis.gl/react-google-maps": "^1.5.4",
     "cloudinary": "^2.7.0",
     "clsx": "^2.1.1",
     "mapbox-gl": "^3.13.0",
@@ -28,7 +29,8 @@
     "react-share": "^5.2.2",
     "react-spinners": "^0.17.0",
     "react-toastify": "^11.0.5",
-    "sonner": "^2.0.6"
+    "sonner": "^2.0.6",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",

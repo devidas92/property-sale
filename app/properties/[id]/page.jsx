@@ -12,9 +12,8 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 
 const PropertyPage = async ({ params }) => {
-  const { id } = await params; // params is not async
+  const { id } = await params;
   if (!id) return <div>Invalid ID</div>;
-
   await connectDB();
   const property = await Property.findById(id).lean();
   const serializedProperty = serializeMongoDoc(property);
