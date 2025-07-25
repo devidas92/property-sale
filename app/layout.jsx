@@ -1,4 +1,9 @@
-import "@/app/assets/styles/globals.css";
+import "@/assets/styles/globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { AuthProvider } from "./components/authProvider";
+import { Toaster } from "sonner";
+import { GlobalContextProvider } from "./utils/context/GlobalContext";
 
 export const metaData = {
   title: "Korbet Property",
@@ -7,11 +12,18 @@ export const metaData = {
 };
 const MainLayout = ({ children }) => {
   return (
-    <html>
-      <body>
-        <main>{children}</main>
-      </body>
-    </html>
+    <AuthProvider>
+      <GlobalContextProvider>
+        <html>
+          <body>
+            <Navbar />
+            <main>{children}</main>
+            <Toaster richColors position="top-center" />
+            <Footer />
+          </body>
+        </html>
+      </GlobalContextProvider>
+    </AuthProvider>
   );
 };
 
