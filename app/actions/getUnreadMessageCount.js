@@ -13,7 +13,7 @@ export const getUnreadMessageCount = async () => {
   }
   const { userId } = sessionUser;
   const count = await Message.countDocuments({
-    recipients: userId,
+    recipient: userId,
     read: false,
   });
 
